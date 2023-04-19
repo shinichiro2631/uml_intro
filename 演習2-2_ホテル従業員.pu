@@ -1,0 +1,9 @@
+@startuml
+rectangle ホテル {
+usecase 経営者
+usecase ホテル従業員
+usecase 作業
+}
+作業 <|-- 経営者
+作業 <|-- ホテル従業員
+@enduml

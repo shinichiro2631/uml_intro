@@ -1,0 +1,12 @@
+@startuml
+left to right direction
+actor 田中 #DDDDDD;line:black;line.bold;
+actor 鈴木 #DDDDDD;line:black;line.bold;
+rectangle 販売管理システム {
+usecase 商品の出荷
+usecase 注文商品の確認
+usecase 商品の出荷状況を登録
+}
+田中 --> 商品の出荷
+鈴木 --> 商品の出荷
+@enduml

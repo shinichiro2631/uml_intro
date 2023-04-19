@@ -1,0 +1,16 @@
+@startuml ユースケース図
+left to right direction
+actor 社員 #DDDDDD;line:black;line.bold;
+actor 人事担当者 #DDDDDD;line:black;line.bold;
+rectangle 従業員登録システム {
+usecase 社員情報の登録をする
+usecase 社員情報の参照をする
+usecase 社員情報の変更の要求をする
+usecase 社員情報の修正をする
+}
+人事担当者 -> 社員情報の登録をする
+人事担当者 --> 社員情報の修正をする
+社員 --> 社員情報の参照をする
+社員 --> 社員情報の変更の要求をする
+社員情報の変更の要求をする .> 社員情報の修正をする : <<include>>
+@enduml
