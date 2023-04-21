@@ -1,12 +1,13 @@
-@startuml
+@startuml ユースケース図
 left to right direction
-actor 田中 #DDDDDD;line:black;line.bold;
-actor 鈴木 #DDDDDD;line:black;line.bold;
-rectangle 販売管理システム {
-usecase 商品の出荷
-usecase 注文商品の確認
-usecase 商品の出荷状況を登録
+actor 販売管理者 #DDDDDD;line:black;line.bold;
+rectangle "販売管理システム" as system {
+販売管理者 --> (注文商品の確認をする)
+販売管理者 --> (商品の出荷状況の登録をする)
 }
-田中 --> 商品の出荷
-鈴木 --> 商品の出荷
 @enduml
+
+
+
+
+

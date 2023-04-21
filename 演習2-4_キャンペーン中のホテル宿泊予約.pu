@@ -1,9 +1,10 @@
-@startuml
-actor 利用者 #DDDDDD;line:black;line.bold;
-rectangle キャンペーン中のホテルの宿泊予約 {
-usecase ログイン
+@startuml ユースケース図
+rectangle ホテルの宿泊予約システム{
+usecase ログインをする
+usecase キャンペーン内容
 usecase (<u>予約をする</u>\n拡張点\nキャンペーン期間) as input
-usecase input <. (キャンペーン内容) : <<extend>> 
 }
-ログイン <. input : << include >>
+input .> ログインをする: <<include>>
+利用者 --> input
+(キャンペーン内容) .> input: <<extend>>
 @enduml
