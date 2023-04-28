@@ -1,4 +1,4 @@
-@startuml
+@startuml 例題_3-1予約入力インターフェース
 interface 予約入力 {
 ---
 + 予約が入力された
