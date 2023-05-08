@@ -4,7 +4,6 @@ actor 利用者 #DDDDDD;line:black;line.bold;
 actor ホテル従業員#DDDDDD;line:black;line.bold;
 actor ホテル管理者#DDDDDD;line:black;line.bold;
 rectangle ホテル予約システム{
-    usecase ログインする
     usecase 空室状況閲覧
     usecase 空室状況入力
     usecase 会員登録
@@ -16,8 +15,7 @@ rectangle ホテル予約システム{
 }
     (会員登録) .>input :<<extend>>
     利用者  --> input
-    input .> ログインする : << include >>
-    ログインする -->input2
+    input .> input2
     (キャンペーン価格) .>input2 :<<extend>>
     利用者 .> input2
     利用者-->空室状況閲覧
