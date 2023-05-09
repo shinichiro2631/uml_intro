@@ -15,7 +15,7 @@ rectangle ホテル予約システム{
 }
     (会員登録) .>input :<<extend>>
     利用者  --> input
-    input .> input2
+    input ---> input2
     (キャンペーン価格) .>input2 :<<extend>>
     利用者 .> input2
     利用者-->空室状況閲覧
