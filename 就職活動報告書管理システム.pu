@@ -1,0 +1,49 @@
+@startuml
+left to right direction
+actor 学生 #DDDDDD;line:black;line.bold;
+actor 教員 #DDDDDD;line:black;line.bold;
+actor 管理者 #DDDDDD;line:black;line.bold;
+rectangle 就職活動報告書管理システム {
+    usecase 学生アカウントの作成
+    usecase ログイン
+    usecase ログアウト
+    usecase 報告書を作成
+    usecase 報告書を教員に提出
+    usecase 報告書の検索
+    usecase 報告書の閲覧
+    usecase 報告書の編集
+    usecase 学生が作成編集した報告書の確認
+    usecase 学生が作成編集した報告書を管理者に提出
+    usecase 報告書を学生に返却
+    usecase メールを学生に送信
+    usecase 教員が提出した報告書の確認
+    usecase 報告書を教員に返却
+    usecase 報告書を承認
+    usecase メールを教員に送信
+    usecase 学生アカウントの編集削除
+    usecase 教員アカウントの作成編集削除
+    }
+学生 --> 学生アカウントの作成
+学生 --> ログイン
+学生 --> ログアウト
+学生 --> 報告書を作成
+学生 --> 報告書を教員に提出
+学生 --> 報告書の検索
+学生 --> 報告書の閲覧
+学生 --> 報告書の編集
+教員 --> ログイン
+教員 --> ログアウト
+教員 --> 学生が作成編集した報告書の確認
+教員 --> 学生が作成編集した報告書を管理者に提出
+教員 --> 報告書を学生に返却
+教員 --> メールを学生に送信
+管理者 --> ログイン
+管理者 --> ログアウト
+管理者 --> 教員が提出した報告書の確認
+管理者 --> 報告書を教員に返却
+管理者 --> 報告書を承認
+管理者 --> メールを教員に送信
+管理者 --> 学生アカウントの編集削除
+管理者 --> 教員アカウントの作成編集削除
+
+@enduml
