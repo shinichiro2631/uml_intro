@@ -1,0 +1,19 @@
+@startuml 演習3-6
+object "<u>LinuC試験Level1:試験</u>" as k2 {
+名称=情報処理技術者
+日付=2020年10月21日
+}
+object "<u>情報処理技術者試験:試験</u>" as k1 {
+名称=LinuC試験Level1
+日付=2021年3月28日
+}
+object "<u>資格受験者:社員</u>" as car1 {
+氏名=高橋洋平
+}
+object "<u>資格受験者:社員</u>" as car2 {
+氏名=樋口正之
+}
+k1 -- car1
+k2 -- car1
+k2 -- car2
+@enduml

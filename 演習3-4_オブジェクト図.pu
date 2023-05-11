@@ -1,0 +1,22 @@
+@startuml 演習3-4
+left to right direction
+object "<u>車リスト2: 車リスト</u>" as k2 {
+車種
+}
+object "<u>車リスト1: 車リスト</u>" as k1 {
+車種
+}
+object "<u>タイヤ情報1: タイヤ</u>" as car1 {
+タイヤ種類=スタットレス
+大きさ
+料金
+}
+object "<u>タイヤ情報2: タイヤ</u>" as car2 {
+タイヤ種類=ノーマルタイヤ
+大きさ
+料金
+}
+k1 -- car1
+k1 -- car2
+k2 -- car1
+@enduml

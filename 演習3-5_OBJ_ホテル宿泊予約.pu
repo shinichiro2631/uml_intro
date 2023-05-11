@@ -1,0 +1,27 @@
+@startuml 演習3-5
+skinparam classAttributeIconSize 0
+class 予約 {
+}
+
+class 客室 {
+  -号室番号: int
+  -宿泊費: int
+}
+
+class シングルルーム {
+}
+
+class 301号室 {
+}
+
+class 303号室 {
+}
+
+予約 -- 客室
+客室 -- シングルルーム
+301号室 -- シングルルーム
+303号室 -- シングルルーム
+
+hide circle
+
+@enduml

@@ -1,0 +1,28 @@
+@startuml 演習3-7
+skinparam classAttributeIconSize 0
+class "重要顧客" as empty_car {
+- 氏名:高橋洋平
+}
+class "注文" as rental {
+- 注文日:11月21日
+- 数量:2
+- 数量:1
+- 注文日:12月23日
+- 数量:1
+}
+class "顧客" as car {
+- 氏名:高橋洋平
+- 氏名:髙田利恵
+- 住所:String
+}
+class "商品" as customer {
+- 商品名: テレビ
+- 型式: 型式V12345
+- 商品名: 冷蔵庫
+- 型式: 型式R8765
+}
+rental "*" --left-- "1" car
+car <|-down- empty_car
+rental "*" -ri- "1" customer
+hide circle
+@endumls
