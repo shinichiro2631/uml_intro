@@ -1,0 +1,11 @@
+@startuml 就職活動報告書管理システムB
+left to right direction
+actor 学生 #DDDDDD;line:black;line.bold;
+actor 教員 #DDDDDD;line:black;line.bold;
+actor 管理者 #DDDDDD;line:black;line.bold;
+rectangle 就職活動報告書管理システムB {
+    usecase アカウント作成
+    usecase (<u>ログイン</u>\n拡張点\n1.学生\n2.教員\n3.管理者) as input_login
+}
+アカウント作成 --> input_login
+@enduml
