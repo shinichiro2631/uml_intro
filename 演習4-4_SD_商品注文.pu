@@ -1,0 +1,31 @@
+@startuml 演習4-4
+actor 受注係
+ 'メッセージに自動で番号を降る
+ autonumber
+ ' 厳密なUMLに準拠する
+skinparam style strictuml
+
+participant "注文登録画面" as 登録画面
+participant "商品情報" as 商品情報
+participant "注文情報" as 注文情報
+entity 商品
+participant "注文" as 注文
+
+受注係 -> 登録画面: 商品情報確認()
+activate 受注係
+activate 登録画面
+
+登録画面 -> 商品情報: 商品情報表示(商品情報)
+activate 商品情報
+商品情報 --> 登録画面: 商品情報
+
+登録画面 -> 注文情報: 商品登録(注文情報)
+activate 注文情報
+注文情報 -> 商品: 商品情報取得()
+activate 商品
+商品 --> 注文情報: 商品情報
+
+注文情報 -> 注文: 注文オブジェクトを生成する
+activate 注文
+
+@enduml
