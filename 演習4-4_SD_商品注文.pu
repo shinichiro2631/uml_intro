@@ -1,8 +1,6 @@
-@startuml 演習4-4
+@startuml 演習4-4_SD_商品注文
 actor 受注係
- 'メッセージに自動で番号を降る
- autonumber
- ' 厳密なUMLに準拠する
+autonumber
 skinparam style strictuml
 
 participant "注文登録画面" as 登録画面
