@@ -1,0 +1,22 @@
+@startuml 演習4-5
+ 'メッセージに自動で番号を降る
+ autonumber
+ ' 厳密なUMLに準拠する
+skinparam style strictuml
+actor 会員
+participant 商品検索画面
+participant 商品データベース
+
+会員 -> 商品検索画面: 商品検索リクエスト
+activate 商品検索画面
+
+商品検索画面 -> 商品データベース: 商品検索（カテゴリ）
+activate 商品データベース
+
+商品データベース --> 商品検索画面: 商品検索結果
+deactivate 商品データベース
+
+商品検索画面 -> 会員: 商品検索結果表示
+deactivate 商品検索画面
+
+@enduml
