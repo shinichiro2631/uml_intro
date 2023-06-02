@@ -1,0 +1,23 @@
+@startuml 演習6-4
+
+actor 客
+actor ベンダー
+
+rectangle 自動販売機 {
+  usecase お金を入れる as 入れる
+  usecase ボタンを押す as 押す
+  usecase ドリンクが出てくる as 出てくる
+  usecase ドリンクの補充 as 補充
+  usecase 料金の回収 as 回収
+
+  客 --> 入れる
+  客 --> 押す
+  ベンダー --> 補充
+  ベンダー --> 回収
+  押す --> 出てくる
+  入れる --> 押す
+  入れる --> 回収
+  
+}
+
+@enduml

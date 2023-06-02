@@ -1,0 +1,38 @@
+@startuml 演習6-4
+skinparam classAttributeIconSize 0
+
+class 自動販売機 {
+
+}
+
+class ボタン {
+
+}
+
+class 料金装置 {
+  - お金: int
+}
+
+class ベンダー装置 {
+
+}
+
+class ドリンク {
+  - 名前: String
+  - 残りの量: int
+}
+
+class お金 {
+  - 金額: int
+}
+
+自動販売機  -- ボタン
+自動販売機  -- 料金装置
+自動販売機  -- ベンダー装置
+ボタン  -- ドリンク
+料金装置  -- お金
+ベンダー装置  -- ドリンク
+
+hide circle
+
+@enduml

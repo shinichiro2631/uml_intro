@@ -1,0 +1,41 @@
+@startuml 演習6-4
+
+actor 客
+
+ 'メッセージに自動で番号を降る
+ autonumber
+ ' 厳密なUMLに準拠する
+skinparam style strictuml
+
+participant 自動販売機 as VM
+participant ボタン as Button
+participant 料金装置 as PaymentDevice
+participant ベンダー装置 as VendorDevice
+
+activate 客
+
+客 -> VM: お金を入れる
+activate VM
+VM -> PaymentDevice: お金を入れる()
+activate PaymentDevice
+PaymentDevice --> VM
+deactivate PaymentDevice
+VM --> 客
+deactivate VM
+
+客 -> Button: ボタンを押す
+activate Button
+Button -> VM: 押す()
+activate VM
+VM --> VendorDevice: 運ぶ()
+activate VendorDevice
+VendorDevice -> VM: 回収()
+deactivate VendorDevice
+VM --> Button: ドリンクが出てくる
+deactivate VM
+Button --> 客
+deactivate Button
+
+activate 客
+
+@enduml
