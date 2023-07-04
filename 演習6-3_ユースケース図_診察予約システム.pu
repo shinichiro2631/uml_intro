@@ -1,0 +1,20 @@
+@startuml 演習6-3-1
+
+    left to right direction
+    actor 患者 as person #DDDDDD;line:black;line.bold;
+    actor 看護師 as nurse #DDDDDD;line:black;line.bold;
+
+    rectangle 診療予約システム{
+        usecase (予約する) as text1
+        usecase (自分の順番を表示) as text2
+        usecase (予約を取り消し) as text3
+        usecase (現在の順番を表示) as text4
+    }
+
+    person -->text1
+    person -->text2
+    person -->text3
+    person -->text4
+    text4<-- nurse 
+    
+@enduml
